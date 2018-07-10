@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Pytchara Form</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/> 
+    </head>
         <body>
-            <form>
-                <div>
+            <form class="form">
+                <div class="form-group">
                     <label for="full_name">Full Name: </label>
                     <input type="text" id="full_name" name="full_name" 
                              pattern="[A-Za-z\s]+" maxlength="80" required/>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="email">Email: </label>
                     <input type="text" id="email" name="email" maxlength="80" 
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
@@ -15,17 +19,17 @@
                     <input type="tel"  id="phone_number" name="phone_number" 
                             pattern="[0-9]+" maxlength="30" required/>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="country">Country: </label>
                     <input type="text" id="country" name="country" maxlength="20" pattern="[A-Za-z\s]+" required/>
                     <label for="state">State: </label>
                     <input type="text" id="state" name="state" maxlength="20" pattern="[A-Za-z\s]+" required/>     
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="address">Address: </label>
                     <input type="text" id="address" name="address" maxlength="80" required/>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="password">Password: 
                         <span class=warning>*(Must contain at least one number and one uppercase and 
                                                 lowercase letter, and at least 8 or more characters)</span>
@@ -33,25 +37,25 @@
                     <input type="password" id="password" name="password" 
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
                 </div>
-                <div>
+                <div class="form-group">
                         <label for="date">Date: </label>
-                        <input  type="date" id="date" name="date"/><br>
+                        <input  type="date" id="date" name="date"/>
                         <label for="hour">Hour: </label>
                         <input type="time" id="hour" name="hour"/>
                 </div>
-                <div>
-                    <label for="notification">Notifications: </label><br>
+                <div class="form-group">
+                    <label for="notification">Notifications: </label>
                     <input type="checkbox" id="news" value="news">
-                    <label for="news">News </label><br>
+                    <label for="news">News </label>
 
                     <input type="checkbox" id="sales" value="sales">
-                    <label for="sales">Sales </label><br>
+                    <label for="sales">Sales </label>
 
                     <input type="checkbox" id="discounts" value="discounts">
                     <label for="discounts">Discounts </label>
                 </div>
-                <div>
-                    <label for="obs">Observations: </label><br>
+                <div class="form-group">
+                    <label for="obs">Observations: </label>
                     <textarea id="obs" rows="5"  cols="100"></textarea>
                 </div>
                 <input type="submit" value="Send"/>

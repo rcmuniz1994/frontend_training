@@ -1,0 +1,7 @@
+Exercício de CSS:
+
+1- Criar uma divs utilizando as variadas propriedades do border.
+2- Estilizar fonte.
+3- Estilizar o título.
+4- Estilizar o conteúdo do input.
+5- Estilizar o texto do label.
