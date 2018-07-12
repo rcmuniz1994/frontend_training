@@ -9,21 +9,60 @@
     border-color:#000;
 }
 
-.form-group input[type="text"],
-.form-group input[type="tel"],
-.form-group input[type="password"],
-.form-group input[type="date"],
-.form-group input[type="time"]{
-    width: 200px;
-    height: 36px;
-    border: none;
-    border-bottom: 1px solid #000;
-    padding-left: 6px;
-    outline: unset;
-    font-size: 12px;
-    color: #ccc;
+.form-group input[type="text"]{
+  width: 200px;
+  height: 36px;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding-left: 6px;
+  outline: unset;
+  font-size: 12px;
+  color: #ccc;
 }
 
+.form-group input[type="time"]{
+  width: 200px;
+  height: 36px;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding-left: 6px;
+  outline: unset;
+  font-size: 12px;
+  color: #ccc;  
+}
+
+.form-group input[type="date"]{
+  width: 200px;
+  height: 36px;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding-left: 6px;
+  outline: unset;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.form-group input[type="password"]{
+  width: 200px;
+  height: 36px;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding-left: 6px;
+  outline: unset;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.form-group input[type="tel"]{
+  width: 200px;
+  height: 36px;
+  border: none;
+  border-left: 1px solid #ccc;
+  padding-left: 6px;
+  outline: unset;
+  font-size: 12px;
+  color: #ccc;
+}
 .form-group label{
     color: #333;
     font-size: 14px;
