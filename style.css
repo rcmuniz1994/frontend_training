@@ -1,12 +1,27 @@
-/* .form{
-    background:gray;
-} */
+body{
+  background: gray;
+}
+
+h1{
+  text-align: center;
+}
+
+.form{
+  display: inline-block;
+  width: 1000px;
+  height: 700px;
+  border-radius: 12px;
+  background: white;
+  margin-top: 50px;
+  margin-left: 210px;
+}
 
 .form-group{
-    width: 500px;
-    border-width: 1px; 
-    /* border-style: dashed; */
-    border-color:#000;
+  display: inline-block;
+  width: 500px;
+  border-width: 1px; 
+  /* border-style: dashed; */
+  border-color:#000;
 }
 
 .form-group input[type="text"]{

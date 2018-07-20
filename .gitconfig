@@ -1,0 +1,23 @@
+[color]
+    ui = true
+
+[core]
+    excludesfile = ~/.gitignore
+
+[user]
+    name = Rodrigo Muniz
+    email =rodrigomuniz.gppcom@gmail.com 
+
+[alias]
+    ci = commit
+    cam = commit -am
+    co = checkout
+    df = diff --word-diff
+    lg = log --graph --decorate --pretty=oneline --abbrev-commit
+    st = status
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = upstream
