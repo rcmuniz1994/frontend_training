@@ -1,13 +1,21 @@
-body{
+body {
   background: gray;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1{
+h1 {
   text-align: center;
+  font-size: 22px;
 }
 
-.form{
-  display: inline-block;
+#full_name {
+  width: 99%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   width: 1000px;
   height: 700px;
   border-radius: 12px;
@@ -16,70 +24,57 @@ h1{
   margin-left: 210px;
 }
 
-.form-group{
-  display: inline-block;
-  width: 500px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
   border-width: 1px; 
-  /* border-style: dashed; */
-  border-color:#000;
+  background: #ccc;  
+  border-radius: 10px;
 }
 
-.form-group input[type="text"]{
-  width: 200px;
-  height: 36px;
-  border: none;
-  border-bottom: 1px solid #000;
-  padding-left: 6px;
-  outline: unset;
+.form-group label {
+  color: #333;
   font-size: 12px;
-  color: #ccc;
+  text-transform: uppercase;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-left: 7px;
 }
 
-.form-group input[type="time"]{
-  width: 200px;
-  height: 36px;
-  border: none;
-  border-bottom: 1px solid #000;
-  padding-left: 6px;
-  outline: unset;
-  font-size: 12px;
-  color: #ccc;  
+.form-group input {
+  border: 0;
+  display: flex;
+  background: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  background: #f7f7f7;
+  border-radius: 10px;
+  margin-left: 4px;
+  width: 98%;
 }
 
-.form-group input[type="date"]{
-  width: 200px;
-  height: 36px;
-  border: none;
-  border-bottom: 1px solid #000;
-  padding-left: 6px;
-  outline: unset;
-  font-size: 12px;
-  color: #ccc;
+.contact-info,
+.location-info,
+.other-info, 
+.form-group .checks{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  height: 100px;
 }
 
-.form-group input[type="password"]{
-  width: 200px;
-  height: 36px;
-  border: none;
-  border-bottom: 1px solid #000;
-  padding-left: 6px;
-  outline: unset;
-  font-size: 12px;
-  color: #ccc;
+.contact-info .form-group,
+.location-info .form-group, 
+.other-info .form-group {
+  flex: 1;
+  height: 50px;
 }
 
-.form-group input[type="tel"]{
-  width: 200px;
-  height: 36px;
-  border: none;
-  border-left: 1px solid #ccc;
-  padding-left: 6px;
-  outline: unset;
-  font-size: 12px;
-  color: #ccc;
+.notifications{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 220px;
 }
-.form-group label{
-    color: #333;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-}
+
