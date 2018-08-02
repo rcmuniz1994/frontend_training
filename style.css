@@ -8,31 +8,29 @@ h1 {
   font-size: 22px;
 }
 
-#full_name {
-  width: 99%;
+#full_name,
+#address,
+#obs {
+  width: 100%;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 1000px;
-  height: 700px;
+  max-width: 900px;
   border-radius: 12px;
   background: white;
   margin-top: 50px;
-  margin-left: 210px;
+  margin: 0 auto;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 120px;
-  margin-bottom: 20px;
+  height: 60px;
   border-width: 1px; 
-  background: #ccc;  
-  border-radius: 10px;
 }
 
 .form-group label {
@@ -41,7 +39,6 @@ h1 {
   text-transform: uppercase;
   margin-top: 2px;
   margin-bottom: 3px;
-  margin-left: 7px;
 }
 
 .form-group input {
@@ -49,32 +46,80 @@ h1 {
   display: flex;
   background: #f7f7f7;
   border: 1px solid #e6e6e6;
+  height: 30px;
+  outline: none;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  border: 0;
+  display: flex;
   background: #f7f7f7;
-  border-radius: 10px;
+  border: 1px solid #e6e6e6;
   margin-left: 4px;
   width: 98%;
+  height: 150px;
+  outline: none;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+
+input[type="button"] {
+  margin: 0 auto;
+  margin-top: 18px;
+  margin-bottom: 3px;
+  border-radius: 17px;
+  width: 80px;
+  height: 35px;
+  background: #ccc;
+  font-size: 16px;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit {
+  color: #ccc;
+}
+
+.form-group input::placeholder {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.form-group .checks .notifications input {
+  height: 15px;
 }
 
 .contact-info,
-.location-info,
-.other-info, 
-.form-group .checks{
+.location-info {
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  height: 100px;
+  justify-content: space-between;
 }
-
 .contact-info .form-group,
-.location-info .form-group, 
-.other-info .form-group {
-  flex: 1;
-  height: 50px;
+.location-info .form-group{
+  width: 49%;
 }
 
-.notifications{
+.other-info {
+  display: flex;
+  justify-content: space-between;
+}
+.other-info  .form-group{
+  width: 32.5%;
+}
+ 
+.form-group .checks {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 220px;
+  height: 60px;
 }
 
+.client-info .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group .checks .notifications {
+  display: inline-flex;
+  margin-right: 12px;
+}
