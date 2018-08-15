@@ -1,22 +1,48 @@
-
 var sendButton = document.querySelector(".send");
+var fields = ['full_name', 'email', 'phone_number', 'password'];
 
-// melhorias na validação
-// usando um loop
-// criando um objeto factory com rules 
+var emptyValidators = {
+  full_name: [required],
+  email: [required],
+  phone_number: [required],
+  password: [required]
+};
+
+var lengthValidators = {
+  full_name: [minLength3],
+  password: [minLength8]
+};
+
+function required(value){
+  return value == "";
+}
+
+function minLength3(value){
+  return value.length < 3;
+}
+
+function minLength8(value){
+  return value.length < 8;
+}
+
 sendButton.addEventListener('click', (event) => {
-  var fullName = document.querySelector('#full_name').value;
-  var email = document.querySelector('#email').value;
 
-  if (fullName === '') {
-    alert("The fullName is required");
-    return;
-  }
-
-  if (email === '') {
-    alert("The Email is required");  
-    return; 
-  }
-
-  // make the request and store data
+  fields.forEach(function (field){
+    var inputValue = document.querySelector('#'+field).value;
+    var fieldsEmptyValidators = emptyValidators[field];
+    var fieldsLengthValidators = lengthValidators[field];
+    
+    fieldsEmptyValidators.forEach(function (funcValidate) {
+      var emptyValidation = funcValidate(inputValue);
+      if (emptyValidation === true){
+        alert(field+' is invalid!')
+      }
+    )};
+    fieldsLengthValidators.forEach(function (funcValidate) {
+      var lengthValidation = funcValidate(inputValue);
+      if (lengthValidation === true){
+        alert(field+' is too short!')
+      }
+    )};
+  });
 });
