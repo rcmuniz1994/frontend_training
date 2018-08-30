@@ -37,12 +37,14 @@ sendButton.addEventListener('click', (event) => {
       if (emptyValidation === true){
         alert(field+' is invalid!')
       }
-    )};
-    fieldsLengthValidators.forEach(function (funcValidate) {
-      var lengthValidation = funcValidate(inputValue);
-      if (lengthValidation === true){
-        alert(field+' is too short!')
-      }
-    )};
+    });
+    if(fieldsLengthValidators){
+      fieldsLengthValidators.forEach(function (funcValidate) {
+        var lengthValidation = funcValidate(inputValue);
+        if (lengthValidation === true){
+          alert(field+' is too short!')
+        }
+      });
+    }
   });
 });
