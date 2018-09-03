@@ -1,14 +1,11 @@
 var sendButton = document.querySelector(".send");
 var fields = ['full_name', 'email', 'phone_number', 'password'];
 
-var emptyValidators = {
+var Validators = {
   full_name: [required],
   email: [required],
   phone_number: [required],
-  password: [required]
-};
-
-var lengthValidators = {
+  password: [required],
   full_name: [minLength3],
   password: [minLength8]
 };
@@ -29,22 +26,13 @@ sendButton.addEventListener('click', (event) => {
 
   fields.forEach(function (field){
     var inputValue = document.querySelector('#'+field).value;
-    var fieldsEmptyValidators = emptyValidators[field];
-    var fieldsLengthValidators = lengthValidators[field];
+    var fieldsValidators = Validators[field];
     
-    fieldsEmptyValidators.forEach(function (funcValidate) {
-      var emptyValidation = funcValidate(inputValue);
-      if (emptyValidation === true){
+    fieldsValidators.forEach(function (funcValidate) {
+      var Validation = funcValidate(inputValue);
+      if (Validation === true){
         alert(field+' is invalid!')
       }
     });
-    if(fieldsLengthValidators){
-      fieldsLengthValidators.forEach(function (funcValidate) {
-        var lengthValidation = funcValidate(inputValue);
-        if (lengthValidation === true){
-          alert(field+' is too short!')
-        }
-      });
-    }
   });
 });
