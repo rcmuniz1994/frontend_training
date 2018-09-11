@@ -27,7 +27,7 @@ sendButton.addEventListener('click', (event) => {
   fields.forEach(function (field){
     var inputValue = document.querySelector('#'+field).value;
     var fieldsValidators = Validators[field];
-    
+
     fieldsValidators.forEach(function (funcValidate) {
       var Validation = funcValidate(inputValue);
       if (Validation === true){
