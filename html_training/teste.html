@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Página 1</title>
+  <script type="text/javascript">
+    function addItem() {
+      var novoItem = document.createElement("div");
+      var titulo = document.createElement("h3");
+      var texto = document.createElement("p");
+      var date = document.createElement("p");
+      var entrada = document.getElementById("entrada");
+      var htmlTitulo = document.getElementById("titulo");
+      titulo.innerHTML = htmlTitulo.value;
+      texto.innerHTML = entrada.value;
+      var data = new Date();
+      date.innerHTML = data.getDate().toString() + '/' + data.getMonth().toString() + '/' + data.getFullYear().toString();
+      novoItem.appendChild(titulo);
+      novoItem.appendChild(texto);
+      novoItem.appendChild(date);
+
+      document.getElementById("lista").appendChild(novoItem);
+    }
+  </script>
+</head>
+
+
+<body>
+  <h1>
+    <strong>Página de post</strong>
+  </h1><br />
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" maxlength="200" /><br />
+  <label for="entrada">Texto:</label>
+  <input type="text" id="entrada" maxlength="200" /><br />
+  <button onClick="addItem()">Adicionar postagem</button><br />
+  <div>
+    Lista: <br />
+    <div id="lista"></div>
+  </div>
+  <a href="./teste2.html">Ir para a página 2.</a>
+</body>
+
+</html>
